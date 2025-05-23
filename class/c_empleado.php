@@ -1,6 +1,6 @@
 <?php
 include_once("basedatos.php");
-class banco extends basedatos
+class empleado extends basedatos
 {
     public $empleadoID;
     public $nombre;
@@ -44,7 +44,7 @@ class banco extends basedatos
 
     public function insertar()
     {
-        $sql = sprintf("INSERT INTO discotienda (empleadoID,nombre,cargo) VALUES ('%s', '%s', '%s')", $this->empleadoID, $this->nombre, $this->cargo);
+        $sql = sprintf("INSERT INTO empleado (empleadoID,nombre,cargo) VALUES ('%s', '%s', '%s')", $this->empleadoID, $this->nombre, $this->cargo);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $this->desconectar();
@@ -52,7 +52,7 @@ class banco extends basedatos
 
     public function listar()
     {
-        $sql = "SELECT * FROM discotienda ORDER BY nombre ASC";
+        $sql = "SELECT * FROM empleado ORDER BY nombre ASC";
         $this->conectar();
         $this->ejecutarSQL($sql);
         $res = $this->cargarTodo();
@@ -62,7 +62,7 @@ class banco extends basedatos
 
     public function consultar()
     {
-        $sql = sprintf("SELECT * FROM discotienda WHERE empleadoID = %s", $this->empleadoID);
+        $sql = sprintf("SELECT * FROM empleado WHERE empleadoID = %s", $this->empleadoID);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $res = $this->cargarRegistro();
@@ -73,7 +73,7 @@ class banco extends basedatos
 
     public function eliminar()
     {
-        $sql = sprintf("DELETE FROM discotienda WHERE empleadoID = %s", $this->empleadoID);
+        $sql = sprintf("DELETE FROM empleado WHERE empleadoID = %s", $this->empleadoID);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $this->desconectar();
@@ -81,7 +81,7 @@ class banco extends basedatos
 
     public function actualizar()
     {
-        $sql = sprintf("UPDATE discotienda SET empleadoID = '%s', nombre = '%s', codigo = '%s' WHERE empleadoID = '%s'", $this->empleadoID, $this->nombre, $this->cargo, $this->empleadoID);
+        $sql = sprintf("UPDATE empleado SET empleadoID = '%s', nombre = '%s', codigo = '%s' WHERE empleadoID = '%s'", $this->empleadoID, $this->nombre, $this->cargo, $this->empleadoID);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $this->desconectar();

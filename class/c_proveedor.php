@@ -66,7 +66,7 @@ class proveedor extends basedatos
 
     public function insertar()
     {
-        $sql = sprintf("INSERT INTO discotienda (proveedorID,nombre_proveedor,contacto,telefono,email) VALUES ('%s', '%s', '%s', '%s', '%s')", $this->proveedorID, $this->nombre_proveedor, $this->contacto, $this->telefono, $this->email);
+        $sql = sprintf("INSERT INTO proveedor (proveedorID,nombre_proveedor,contacto,telefono,email) VALUES ('%s', '%s', '%s', '%s', '%s')", $this->proveedorID, $this->nombre_proveedor, $this->contacto, $this->telefono, $this->email);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $this->desconectar();
@@ -74,7 +74,7 @@ class proveedor extends basedatos
 
     public function listar()
     {
-        $sql = "SELECT * FROM discotienda ORDER BY nombre_proveedor ASC";
+        $sql = "SELECT * FROM proveedor ORDER BY nombre_proveedor ASC";
         $this->conectar();
         $this->ejecutarSQL($sql);
         $res = $this->cargarTodo();
@@ -84,7 +84,7 @@ class proveedor extends basedatos
 
     public function consultar()
     {
-        $sql = sprintf("SELECT * FROM discotienda WHERE proveedorID = %s", $this->proveedorID);
+        $sql = sprintf("SELECT * FROM proveedor WHERE proveedorID = %s", $this->proveedorID);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $res = $this->cargarRegistro();
@@ -97,7 +97,7 @@ class proveedor extends basedatos
 
     public function eliminar()
     {
-        $sql = sprintf("DELETE FROM discotienda WHERE proveedorID = %s", $this->proveedorID);
+        $sql = sprintf("DELETE FROM proveedor WHERE proveedorID = %s", $this->proveedorID);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $this->desconectar();
@@ -105,7 +105,7 @@ class proveedor extends basedatos
 
     public function actualizar()
     {
-        $sql = sprintf("UPDATE discotienda SET proveedorID = '%s', nombre_proveedor = '%s', contacto = '%s', telefono = '%s', email = '%s' WHERE proveedorID = '%s'", $this->proveedorID, $this->nombre_proveedor, $this->contacto, $this->telefono, $this->email, $this->proveedorID);
+        $sql = sprintf("UPDATE proveedor SET proveedorID = '%s', nombre_proveedor = '%s', contacto = '%s', telefono = '%s', email = '%s' WHERE proveedorID = '%s'", $this->proveedorID, $this->nombre_proveedor, $this->contacto, $this->telefono, $this->email, $this->proveedorID);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $this->desconectar();
