@@ -12,7 +12,7 @@ class empleado extends basedatos
         $this->cargo = $cargo;
     }
 
-    public function getempleadoID()
+    public function getEmpleadoID()
     {
         return $this->empleadoID;
     }
