@@ -23,12 +23,12 @@ class artista extends basedatos
         return $this->nombre;
     }
 
-    public function getCargo()
+    public function getNacionalidad()
     {
-        return $this->cargo;
+        return $this->nacionalidad;
     }
 
-    public function setartistaID($artistaID)
+    public function setArtistaID($artistaID)
     {
         return $this->artistaID = $artistaID;
     }
@@ -38,14 +38,14 @@ class artista extends basedatos
         return $this->nombre = $nombre;
     }
 
-    public function setCargo($cargo)
+    public function setNacionalidad($nacionalidad)
     {
-        return $this->cargo = $cargo;
+        return $this->nacionalidad = $nacionalidad;
     }
 
     public function insertar()
     {
-        $sql = sprintf("INSERT INTO discotienda (artistaID,nombre,cargo) VALUES ('%s', '%s', '%s')", $this->artistaID, $this->nombre, $this->cargo);
+        $sql = sprintf("INSERT INTO discotienda (artistaID,nombre,cargo) VALUES ('%s', '%s', '%s')", $this->artistaID, $this->nombre, $this->nacionalidad);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $this->desconectar();
@@ -69,7 +69,7 @@ class artista extends basedatos
         $res = $this->cargarRegistro();
         $this->desconectar();
         $this->nombre = $res["nombre"];
-        $this->cargo = $res["cargo"];
+        $this->nacionalidad = $res["nacionalidad"];
     }
 
     public function eliminar()
@@ -82,7 +82,7 @@ class artista extends basedatos
 
     public function actualizar()
     {
-        $sql = sprintf("UPDATE discotienda SET artistaID = '%s', nombre = '%s', codigo = '%s' WHERE artistaID = '%s'", $this->artistaID, $this->nombre, $this->cargo, $this->artistaID);
+        $sql = sprintf("UPDATE discotienda SET artistaID = '%s', nombre = '%s', codigo = '%s' WHERE artistaID = '%s'", $this->artistaID, $this->nombre, $this->nacionalidad, $this->artistaID);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $this->desconectar();
