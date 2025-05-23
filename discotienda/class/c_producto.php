@@ -8,44 +8,53 @@ class producto extends basedatos
     public  $precio;
     function __construct($productoID = NULL, $titulo = NULL, $año_lanzamiento = NULL, $precio = NULL)
     {
-        $this->pro = $empleadoID;
-        $this->nombre = $nombre;
-        $this->cargo = $cargo;
+        $this->productoID = $productoID;
+        $this->titulo = $titulo;
+        $this->año_lanzamiento = $año_lanzamiento;
+        $this->precio = $precio;
     }
 
-    public function getempleadoID()
+    public function getProductoID()
     {
-        return $this->empleadoID;
+        return $this->productoID;
     }
 
-    public function getNombre()
+    public function getTitulo()
     {
-        return $this->nombre;
+        return $this->titulo;
     }
 
-    public function getCargo()
+    public function getAñoLanzamiento()
     {
-        return $this->cargo;
+        return $this->año_lanzamiento;
+    }
+    public function getPrecio()
+    {
+        return $this->precio;
     }
 
-    public function setEmpleadoID($empleadoID)
+    public function setProductoId($productoID)
     {
-        return $this->empleadoID = $empleadoID;
+        return $this->productoID = $productoID;
     }
 
-    public function setNombre($nombre)
+    public function setTitulo($titulo)
     {
-        return $this->nombre = $nombre;
+        return $this->titulo = $titulo;
     }
 
-    public function setCargo($cargo)
+    public function setAñoLanzamiento($año_lanzamiento)
     {
-        return $this->cargo = $cargo;
+        return $this->año_lanzamiento = $año_lanzamiento;
+    }
+    public function setPrecio($precio)
+    {
+        return $this->precio = $precio;
     }
 
     public function insertar()
     {
-        $sql = sprintf("INSERT INTO discotienda (empleadoID,nombre,cargo) VALUES ('%s', '%s', '%s')", $this->empleadoID, $this->nombre, $this->cargo);
+        $sql = sprintf("INSERT INTO discotienda (productoID,titulo,año_lanzamiento,precio) VALUES ('%s', '%s', '%s', '%s')", $this->productoID, $this->titulo, $this->año_lanzamiento, $this->precio);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $this->desconectar();
@@ -53,7 +62,7 @@ class producto extends basedatos
 
     public function listar()
     {
-        $sql = "SELECT * FROM discotienda ORDER BY nombre ASC";
+        $sql = "SELECT * FROM discotienda ORDER BY titulo ASC";
         $this->conectar();
         $this->ejecutarSQL($sql);
         $res = $this->cargarTodo();
@@ -63,18 +72,19 @@ class producto extends basedatos
 
     public function consultar()
     {
-        $sql = sprintf("SELECT * FROM discotienda WHERE empleadoID = %s", $this->empleadoID);
+        $sql = sprintf("SELECT * FROM discotienda WHERE productoID = %s", $this->productoID);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $res = $this->cargarRegistro();
         $this->desconectar();
-        $this->nombre = $res["nombre"];
-        $this->cargo = $res["cargo"];
+        $this->titulo = $res["titulo"];
+        $this->año_lanzamiento = $res["año_lanzamiento"];
+        $this->precio = $res["precio"];
     }
 
     public function eliminar()
     {
-        $sql = sprintf("DELETE FROM discotienda WHERE empleadoID = %s", $this->empleadoID);
+        $sql = sprintf("DELETE FROM discotienda WHERE productoID = %s", $this->productoID);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $this->desconectar();
@@ -82,7 +92,7 @@ class producto extends basedatos
 
     public function actualizar()
     {
-        $sql = sprintf("UPDATE discotienda SET empleadoID = '%s', nombre = '%s', codigo = '%s' WHERE empleadoID = '%s'", $this->empleadoID, $this->nombre, $this->cargo, $this->empleadoID);
+        $sql = sprintf("UPDATE discotienda SET productoID = '%s', titulo = '%s', año_lanzamiento = '%s', precio = '%s' WHERE productoID = '%s'", $this->productoID, $this->titulo, $this->año_lanzamiento, $this->precio, $this->productoID);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $this->desconectar();

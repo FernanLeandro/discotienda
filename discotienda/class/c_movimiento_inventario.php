@@ -1,6 +1,6 @@
 <?php
 include_once("basedatos.php");
-class c_movimiento_inventario extends basedatos
+class movimiento_inventario extends basedatos
 {
     public $movimientoID;
     public $fecha;
@@ -74,7 +74,7 @@ class c_movimiento_inventario extends basedatos
 
     public function insertar()
     {
-        $sql = sprintf("INSERT INTO discotienda (movimientoID,fecha,tipo,cantidad,productoID,empleadoID) VALUES ('%s', '%s', '%s')", $this->movimientoID, $this->fecha, $this->tipo, $this->cantidad, $this->productoID, $this->empleadoID);
+        $sql = sprintf("INSERT INTO discotienda (movimientoID,fecha,tipo,cantidad,productoID,empleadoID) VALUES ('%s', '%s', '%s', '%s', '%s', '%s')", $this->movimientoID, $this->fecha, $this->tipo, $this->cantidad, $this->productoID, $this->empleadoID);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $this->desconectar();
@@ -114,7 +114,7 @@ class c_movimiento_inventario extends basedatos
 
     public function actualizar()
     {
-        $sql = sprintf("UPDATE discotienda SET movimientoID = '%s', fecha = '%s', tipo = '%s', cantidad = '%s', productoID = '%s', empleadoID = '%s'", $this->movimientoID, $this->fecha, $this->tipo, $this->cantidad,  $this->productoID, $this->empleadoID);
+        $sql = sprintf("UPDATE discotienda SET movimientoID = '%s', fecha = '%s', tipo = '%s', cantidad = '%s', productoID = '%s', empleadoID = '%s'", $this->movimientoID, $this->fecha, $this->tipo, $this->cantidad,  $this->productoID, $this->empleadoID, $this->movimientoID);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $this->desconectar();
