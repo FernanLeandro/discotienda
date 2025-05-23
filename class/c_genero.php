@@ -6,15 +6,12 @@ class genero extends basedatos
 {
     public $generoID;
     public $nombre;
-    //public $nacionalidad;
-    public function __construct($generoID
- = 'NULL', $nombre = 'NULL')
+    public $nacionalidad;
+    public function __construct($generoID = NULL, $nombre = NULL, $nacionalidad = NULL)
     {
-        $this->generoID
- = $generoID
-;
+        $this->generoID = $generoID;
         $this->nombre = $nombre;
-       // $this->nacionalidad = $nacionalidad;
+        $this->nacionalidad = $nacionalidad;
     }
     //metodo get
     public function getgeneroID()    {
@@ -30,15 +27,11 @@ class genero extends basedatos
     // return $this->cod_transaccion;
     //}
     //metodo set
-    public function setargeneroID
-($generoID
-)    {
-        $this->generoID
- = $generoID
+    public function setGeneroID($generoID)    {
+        $this->generoID = $generoID
 ;
     }
-    public function setNombre($nombre)    {
-        $this->nombre = $nombre;
+    public function setNombre($nombre)    {     $this->nombre = $nombre;
     }
     //public function setCodTransaccion($cod_transaccion)
     //{
