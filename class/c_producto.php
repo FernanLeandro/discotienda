@@ -54,7 +54,7 @@ class producto extends basedatos
 
     public function insertar()
     {
-        $sql = sprintf("INSERT INTO discotienda (productoID,titulo,año_lanzamiento,precio) VALUES ('%s', '%s', '%s', '%s')", $this->productoID, $this->titulo, $this->año_lanzamiento, $this->precio);
+        $sql = sprintf("INSERT INTO producto (productoID,titulo,año_lanzamiento,precio) VALUES ('%s', '%s', '%s', '%s')", $this->productoID, $this->titulo, $this->año_lanzamiento, $this->precio);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $this->desconectar();
@@ -62,7 +62,7 @@ class producto extends basedatos
 
     public function listar()
     {
-        $sql = "SELECT * FROM discotienda ORDER BY titulo ASC";
+        $sql = "SELECT * FROM producto ORDER BY titulo ASC";
         $this->conectar();
         $this->ejecutarSQL($sql);
         $res = $this->cargarTodo();
@@ -72,7 +72,7 @@ class producto extends basedatos
 
     public function consultar()
     {
-        $sql = sprintf("SELECT * FROM discotienda WHERE productoID = %s", $this->productoID);
+        $sql = sprintf("SELECT * FROM producto WHERE productoID = %s", $this->productoID);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $res = $this->cargarRegistro();
@@ -84,7 +84,7 @@ class producto extends basedatos
 
     public function eliminar()
     {
-        $sql = sprintf("DELETE FROM discotienda WHERE productoID = %s", $this->productoID);
+        $sql = sprintf("DELETE FROM producto WHERE productoID = %s", $this->productoID);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $this->desconectar();
@@ -92,7 +92,7 @@ class producto extends basedatos
 
     public function actualizar()
     {
-        $sql = sprintf("UPDATE discotienda SET productoID = '%s', titulo = '%s', año_lanzamiento = '%s', precio = '%s' WHERE productoID = '%s'", $this->productoID, $this->titulo, $this->año_lanzamiento, $this->precio, $this->productoID);
+        $sql = sprintf("UPDATE producto SET productoID = '%s', titulo = '%s', año_lanzamiento = '%s', precio = '%s' WHERE productoID = '%s'", $this->productoID, $this->titulo, $this->año_lanzamiento, $this->precio, $this->productoID);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $this->desconectar();

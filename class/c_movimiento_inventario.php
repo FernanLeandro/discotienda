@@ -74,7 +74,7 @@ class movimiento_inventario extends basedatos
 
     public function insertar()
     {
-        $sql = sprintf("INSERT INTO discotienda (movimientoID,fecha,tipo,cantidad,productoID,empleadoID) VALUES ('%s', '%s', '%s', '%s', '%s', '%s')", $this->movimientoID, $this->fecha, $this->tipo, $this->cantidad, $this->productoID, $this->empleadoID);
+        $sql = sprintf("INSERT INTO movimiento_inventario (movimientoID,fecha,tipo,cantidad,productoID,empleadoID) VALUES ('%s', '%s', '%s', '%s', '%s', '%s')", $this->movimientoID, $this->fecha, $this->tipo, $this->cantidad, $this->productoID, $this->empleadoID);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $this->desconectar();
@@ -82,7 +82,7 @@ class movimiento_inventario extends basedatos
 
     public function listar()
     {
-        $sql = "SELECT * FROM discotienda ORDER BY fecha ASC";
+        $sql = "SELECT * FROM movimiento_inventario ORDER BY fecha ASC";
         $this->conectar();
         $this->ejecutarSQL($sql);
         $res = $this->cargarTodo();
@@ -92,7 +92,7 @@ class movimiento_inventario extends basedatos
 
     public function consultar()
     {
-        $sql = sprintf("SELECT * FROM discotienda WHERE movimientoID = %s", $this->movimientoID);
+        $sql = sprintf("SELECT * FROM movimiento_inventario WHERE movimientoID = %s", $this->movimientoID);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $res = $this->cargarRegistro();
@@ -106,7 +106,7 @@ class movimiento_inventario extends basedatos
 
     public function eliminar()
     {
-        $sql = sprintf("DELETE FROM discotienda WHERE movimientoId = %s", $this->movimientoID);
+        $sql = sprintf("DELETE FROM movimiento_inventario WHERE movimientoId = %s", $this->movimientoID);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $this->desconectar();
@@ -114,7 +114,7 @@ class movimiento_inventario extends basedatos
 
     public function actualizar()
     {
-        $sql = sprintf("UPDATE discotienda SET movimientoID = '%s', fecha = '%s', tipo = '%s', cantidad = '%s', productoID = '%s', empleadoID = '%s'", $this->movimientoID, $this->fecha, $this->tipo, $this->cantidad,  $this->productoID, $this->empleadoID, $this->movimientoID);
+        $sql = sprintf("UPDATE movimiento_inventario SET movimientoID = '%s', fecha = '%s', tipo = '%s', cantidad = '%s', productoID = '%s', empleadoID = '%s'", $this->movimientoID, $this->fecha, $this->tipo, $this->cantidad,  $this->productoID, $this->empleadoID, $this->movimientoID);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $this->desconectar();
