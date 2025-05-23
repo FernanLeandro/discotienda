@@ -1,10 +1,12 @@
 <?php
 include_once("basedatos.php");
-class banco extends basedatos
+class proveedor extends basedatos
 {
-    public $empleadoID;
-    public $nombre;
-    public $cargo;
+    public $proveedorID;
+    public $nombre_proveedor;
+    public $contacto;
+    public $telefono;
+    public $email;
     function __construct($empleadoID = NULL, $nombre = NULL, $cargo = NULL)
     {
         $this->empleadoID = $empleadoID;
