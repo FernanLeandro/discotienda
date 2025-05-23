@@ -2,7 +2,7 @@
 include_once "basedatos.php";
 //clase artista
 
-class artista extends basedatos
+class genero extends basedatos
 {
     public $generoID;
     public $nombre;
