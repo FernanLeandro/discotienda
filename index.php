@@ -11,7 +11,10 @@
 <body>
   <header>
     <img src="images/logo.png" alt="logo">
-    <h1>DiscoTienda FDJM</h1>
+    <div >
+      <img class="logo" src="images/horizontal.png" alt="">
+   </div>
+    
     <div class="menu-icon" onclick="toggleSidebar()">☰</div>
   </header>
 
