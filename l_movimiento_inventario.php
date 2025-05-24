@@ -131,7 +131,7 @@
                 <th>Artista ID</th>
                 <th>Nombre</th>
                 <th>Nacionalidad</th>
-                <th colspan="2">Acciones <a href="cr_artista.php" title="Crear nuevo movimiento inventario">[+]</a></th>
+                <th colspan="2">Acciones <a href="cr_artista.php" title="Crear nuevo movimiento inventario">➕</a></th>
             </tr>
         </thead>
         <tbody>
@@ -141,12 +141,12 @@
                     <td><?php echo $registro['nombre']; ?></td>
                     <td><?php echo $registro['nacionalidad']; ?></td>
                     <td>
-                        <form action="ac_artista.php" method="POST">
+                        <form action="ac_movimiento_inventario.php" method="POST">
                             <button name="cod_actualizar" value="<?php echo $registro['artistaID']; ?>">Actualizar</button>
                         </form>
                     </td>
                     <td>
-                        <form action="artista/op_eliminar.php" method="POST">
+                        <form action="movimiento_inventario/op_eliminar.php" method="POST">
                             <button name="cod_eliminar" value="<?php echo $registro['artistaID']; ?>">Eliminar</button>
                         </form>
                     </td>

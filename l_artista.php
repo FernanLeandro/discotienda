@@ -131,7 +131,7 @@
                 <th>Artista ID</th>
                 <th>Nombre</th>
                 <th>Nacionalidad</th>
-                <th colspan="2">Acciones <a href="cr_artista.php" title="Crear nuevo artista">[+]</a></th>
+                <th colspan="2">Acciones <a href="cr_artista.php" title="Crear nuevo artista">➕</a></th>
             </tr>
         </thead>
         <tbody>

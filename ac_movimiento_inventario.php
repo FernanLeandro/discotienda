@@ -12,7 +12,7 @@ $movimiento_inventario->consultar();
     <title>Actualizar Movimiento Inventario</title>
 </head>
 <body>
-    <form action="artista/op_actualizar.php" method="POST">
+    <form action="movimiento_inventario/op_actualizar.php" method="POST">
         <input type="hidden" name="artistaID" value="<?php echo $artista->getArtistaID(); ?>">
         <div>
             <label for="nombre">Nombre </label>

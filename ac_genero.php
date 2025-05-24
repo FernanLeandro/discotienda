@@ -12,7 +12,7 @@ $genero->consultar();
     <title>Actualizar Genero</title>
 </head>
 <body>
-    <form action="artista/op_actualizar.php" method="POST">
+    <form action="genero/op_actualizar.php" method="POST">
         <input type="hidden" name="artistaID" value="<?php echo $artista->getArtistaID(); ?>">
         <div>
             <label for="nombre">Nombre </label>

@@ -12,15 +12,15 @@ $empleado->consultar();
     <title>Actualizar Empleado</title>
 </head>
 <body>
-    <form action="artista/op_actualizar.php" method="POST">
-        <input type="hidden" name="artistaID" value="<?php echo $artista->getArtistaID(); ?>">
+    <form action="empleado/op_actualizar.php" method="POST">
+        <input type="hidden" name="empleadoID" value="<?php echo $empleado->getEmpleadoID(); ?>">
         <div>
             <label for="nombre">Nombre </label>
-            <input type="text" name="nombre" id="getNombre" class="dato_formulario" required maxlength="200" value="<?php echo $artista->getNombre(); ?>">
+            <input type="text" name="nombre" id="getNombre" class="dato_formulario" required maxlength="200" value="<?php echo $empleado->getNombre(); ?>">
         </div>
         <div>
-            <label for="nacionalidad">Nacionalidad</label>
-            <input type="text" name="nacionalidad" id="nacionalidad" class="dato_formulario" required value="<?php echo $artista->getNacionalidad(); ?>">
+            <label for="cargo">Cargo</label>
+            <input type="text" name="nacionalidad" id="nacionalidad" class="dato_formulario" required value="<?php echo $empleado->getCargo(); ?>">
         </div>
         <div class="enviar_formulario">
             <input type="submit" value="Actualizar">

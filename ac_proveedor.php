@@ -12,7 +12,7 @@ $proveedor->consultar();
     <title>Actualizar Proveedor</title>
 </head>
 <body>
-    <form action="artista/op_actualizar.php" method="POST">
+    <form action="proveedor/op_actualizar.php" method="POST">
         <input type="hidden" name="artistaID" value="<?php echo $artista->getArtistaID(); ?>">
         <div>
             <label for="nombre">Nombre </label>

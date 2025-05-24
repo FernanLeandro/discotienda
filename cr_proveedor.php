@@ -140,7 +140,7 @@
 
     <div class="main-content">
         <div class="content">
-            <form action="artista/op_crear.php" method="POST">
+            <form action="proveedor/op_crear.php" method="POST">
                 <div>
                     <label for="nombre">Nombre</label>
                     <input type="text" name="nombre" id="nombre" class="dato_formulario" required maxlength="200">

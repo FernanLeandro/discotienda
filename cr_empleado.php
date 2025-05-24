@@ -140,27 +140,25 @@
 
     <div class="main-content">
         <div class="content">
-            <form action="artista/op_crear.php" method="POST">
-                <div>
-                    <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" id="nombre" class="dato_formulario" required maxlength="200">
-                </div>
-                <div>
-                    <label for="nacionalidad">Nacionalidad</label>
-                    <input type="text" name="nacionalidad" id="nacionalidad" class="dato_formulario" required">
-                </div>
-                <div>
-                    <div class="enviar_formulario">
-                        <input type="submit" value="Crear">
-                    </div>
-                    <div class="limpiar_formulario">
-                        <input type="reset" value="Limpiar datos">
-                    </div>
-                    <div>
-                        <input type="button" value="Volver" onclick="document.location.href='l_artista.php'">
-                    </div>
-                </div>
-            </form>
+    <form action="empleado/op_crear.php" method="POST">
+        <div>
+            <label for="nombre">Nombre </label>
+            <input type="text" name="nombre" id="getNombre" class="dato_formulario" required maxlength="200"">
+        </div>
+        <div>
+            <label for="cargo">Cargo</label>
+            <input type="text" name="nacionalidad" id="nacionalidad" class="dato_formulario" required">
+        </div>
+        <div class="enviar_formulario">
+            <input type="submit" value="Crear">
+        </div>
+        <div class="limpiar_formulario">
+            <input type="reset" value="Limpiar datos">
+        </div>
+        <div>
+            <input type="button" value="Volver" onclick="document.location.href='l_artista.php'">
+        </div>
+    </form>
         </div>
     </div>
 </body>

@@ -128,26 +128,26 @@
       <table>
         <thead>
             <tr>
-                <th>Artista ID</th>
+                <th>Empleado ID</th>
                 <th>Nombre</th>
-                <th>Nacionalidad</th>
-                <th colspan="2">Acciones <a href="cr_empleado.php" title="Crear nuevo empleado">[+]</a></th>
+                <th>Cargo</th>
+                <th colspan="2">Acciones <a href="cr_empleado.php" title="Crear nuevo empleado">➕</a></th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($res as $registro) { ?>
                 <tr>
-                    <td><?php echo $registro['artistaID']; ?></td>
+                    <td><?php echo $registro['empleadoID']; ?></td>
                     <td><?php echo $registro['nombre']; ?></td>
-                    <td><?php echo $registro['nacionalidad']; ?></td>
+                    <td><?php echo $registro['cargo']; ?></td>
                     <td>
-                        <form action="ac_artista.php" method="POST">
-                            <button name="cod_actualizar" value="<?php echo $registro['artistaID']; ?>">Actualizar</button>
+                        <form action="ac_empleado.php" method="POST">
+                            <button name="cod_actualizar" value="<?php echo $registro['empleadoID']; ?>">Actualizar</button>
                         </form>
                     </td>
                     <td>
-                        <form action="artista/op_eliminar.php" method="POST">
-                            <button name="cod_eliminar" value="<?php echo $registro['artistaID']; ?>">Eliminar</button>
+                        <form action="empleado/op_eliminar.php" method="POST">
+                            <button name="cod_eliminar" value="<?php echo $registro['empleadoID']; ?>">Eliminar</button>
                         </form>
                     </td>
                 </tr>
@@ -155,9 +155,9 @@
         </tbody>
         <thead>
             <tr>
-                <th>Artista ID</th>
+                <th>Empleado ID</th>
                 <th>Nombre</th>
-                <th>Nacionalidad</th>
+                <th>Cargo</th>
                 <th colspan="2">Acciones</th>
             </tr>
         </thead>
