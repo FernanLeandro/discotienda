@@ -16,7 +16,7 @@ $artista->consultar();
         <input type="hidden" name="artistaID" value="<?php echo $artista->getArtistaID(); ?>">
         <div>
             <label for="nombre">Nombre </label>
-            <input type="text" name="nombre" id="nombre" class="dato_formulario" required maxlength="200" value="<?php echo $artista->getNombre(); ?>">
+            <input type="text" name="nombre" id="getNombre" class="dato_formulario" required maxlength="200" value="<?php echo $artista->getNombre(); ?>">
         </div>
         <div>
             <label for="nacionalidad">Nacionalidad</label>
