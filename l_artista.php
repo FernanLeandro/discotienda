@@ -68,7 +68,6 @@
         </thead>
     </table>
 
-
   <footer>
     © 2025 DiscoTienda, Todos los derechos reservados.
   </footer>

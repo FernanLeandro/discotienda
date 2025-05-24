@@ -5,7 +5,7 @@ class artista extends basedatos
     public $artistaID;
     public $nombre;
     public $nacionalidad;
-    function __construct($artistaID = NULL, $nombre = NULL, $nacionalidad = NULL, $cargo = NULL)
+    function __construct($artistaID = NULL, $nombre = NULL, $nacionalidad = NULL)
     {
         $this->artistaID = $artistaID;
         $this->nombre = $nombre;
