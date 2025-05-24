@@ -163,7 +163,7 @@ $res = $producto->listar();
                 <th>Artista ID</th>
                 <th>Nombre</th>
                 <th>Nacionalidad</th>
-                <th colspan="2">Acciones <a href="cr_artista.php" title="Crear nuevo producto">➕</a></th>
+                <th colspan="2">Acciones</th>
             </tr>
         </thead>
       </table>

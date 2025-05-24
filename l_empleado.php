@@ -163,7 +163,7 @@ $res = $empleado->listar();
                 <th>Empleado ID</th>
                 <th>Nombre</th>
                 <th>Cargo</th>
-                <th colspan="2">Acciones <a href="cr_empleado.php" title="Crear nuevo empleado">➕</a></th>
+                <th colspan="2">Acciones</th>
             </tr>
         </thead>
       </table>

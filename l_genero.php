@@ -9,7 +9,7 @@ $res = $genero->listar();
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lista Genero</title>
+  <title>DiscoTienda FDJM</title>
   <link rel="stylesheet" href="css/master.css">
   <style>
     .main-content {
@@ -160,12 +160,7 @@ $res = $genero->listar();
             <tr>
                 <th>Genero ID</th>
                 <th>Nombre</th>
-<<<<<<< HEAD
-                <th>Nacionalidad</th>
-                <th colspan="2">Acciones <a href="cr_artista.php" title="Crear nuevo genero">➕</a></th>
-=======
                 <th colspan="2">Acciones</th>
->>>>>>> d8cfb3be07391f2a824d3b07de2203c58fd281cc
             </tr>
         </thead>
       </table>
