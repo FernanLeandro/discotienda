@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -133,21 +134,37 @@
         }
     </style>
 </head>
+
 <body>
     <header>
-        <h1>Crear Nuevo Movimiento inventario</h1>
+        <h1>Crear Nuevo Movimiento de Inventario</h1>
     </header>
 
     <div class="main-content">
         <div class="content">
-            <form action="movimiento_inventario/op_crear.php" method="POST">
+            <form action="movimiento_inventario/op_actualizar.php" method="POST">
                 <div>
-                    <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" id="nombre" class="dato_formulario" required maxlength="200">
+                    <label for="fecha">Fecha</label>
+                    <input type="date" name="fecha" id="fecha" class="dato_formulario" required>
                 </div>
                 <div>
-                    <label for="nacionalidad">Nacionalidad</label>
-                    <input type="text" name="nacionalidad" id="nacionalidad" class="dato_formulario" required">
+                    <label for="tipo">Tipo</label>
+                    <select name="tipo" id="tipo" class="dato_formulario" required>
+                        <option value="Entrada">Entrada</option>
+                        <option value="Salida">Salida</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="cantidad">Cantidad</label>
+                    <input type="number" name="cantidad" id="cantidad" class="dato_formulario" required>
+                </div>
+                <div>
+                    <label for="productoID">Producto ID</label>
+                    <input type="number" name="productoID" id="productoID" class="dato_formulario" required>
+                </div>
+                <div>
+                    <label for="empleadoID">Empleado ID</label>
+                    <input type="number" name="empleadoID" id="empleadoID" class="dato_formulario" required>
                 </div>
                 <div>
                     <div class="enviar_formulario">
@@ -157,11 +174,15 @@
                         <input type="reset" value="Limpiar datos">
                     </div>
                     <div>
-                        <input type="button" value="Volver" onclick="document.location.href='l_artista.php'">
+                        <input type="button" value="Volver" onclick="document.location.href='l_movimiento_inventario.php'">
                     </div>
                 </div>
             </form>
         </div>
     </div>
+
+    <footer>
+        © 2025 DiscoTienda, Todos los derechos reservados.
+    </footer>
 </body>
 </html>

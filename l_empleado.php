@@ -1,3 +1,8 @@
+<?php
+require_once('class/c_empleado.php');
+$empleado = new empleado();
+$res = $empleado->listar();
+?>
 <!DOCTYPE html>
 <html lang="es">
 

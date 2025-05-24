@@ -1,3 +1,8 @@
+<?php
+require_once('class/c_genero.php');
+$genero = new genero();
+$res = $genero->listar();
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -128,26 +133,24 @@
       <table>
         <thead>
             <tr>
-                <th>Artista ID</th>
+                <th>Genero ID</th>
                 <th>Nombre</th>
-                <th>Nacionalidad</th>
-                <th colspan="2">Acciones <a href="cr_artista.php" title="Crear nuevo genero">➕</a></th>
+                <th colspan="2">Acciones <a href="cr_genero.php" title="Crear nuevo genero">➕</a></th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($res as $registro) { ?>
                 <tr>
-                    <td><?php echo $registro['artistaID']; ?></td>
+                    <td><?php echo $registro['generoID']; ?></td>
                     <td><?php echo $registro['nombre']; ?></td>
-                    <td><?php echo $registro['nacionalidad']; ?></td>
                     <td>
                         <form action="ac_genero.php" method="POST">
-                            <button name="cod_actualizar" value="<?php echo $registro['artistaID']; ?>">Actualizar</button>
+                            <button name="cod_actualizar" value="<?php echo $registro['generoID']; ?>">Actualizar</button>
                         </form>
                     </td>
                     <td>
                         <form action="genero/op_eliminar.php" method="POST">
-                            <button name="cod_eliminar" value="<?php echo $registro['artistaID']; ?>">Eliminar</button>
+                            <button name="cod_eliminar" value="<?php echo $registro['generoID']; ?>">Eliminar</button>
                         </form>
                     </td>
                 </tr>
@@ -155,10 +158,14 @@
         </tbody>
         <thead>
             <tr>
-                <th>Artista ID</th>
+                <th>Genero ID</th>
                 <th>Nombre</th>
+<<<<<<< HEAD
                 <th>Nacionalidad</th>
                 <th colspan="2">Acciones <a href="cr_artista.php" title="Crear nuevo genero">➕</a></th>
+=======
+                <th colspan="2">Acciones</th>
+>>>>>>> d8cfb3be07391f2a824d3b07de2203c58fd281cc
             </tr>
         </thead>
       </table>

@@ -143,11 +143,11 @@
     <form action="empleado/op_crear.php" method="POST">
         <div>
             <label for="nombre">Nombre </label>
-            <input type="text" name="nombre" id="getNombre" class="dato_formulario" required maxlength="200"">
+            <input type="text" name="nombre" id="nombre" class="dato_formulario" required maxlength="200"">
         </div>
         <div>
             <label for="cargo">Cargo</label>
-            <input type="text" name="nacionalidad" id="nacionalidad" class="dato_formulario" required">
+            <input type="text" name="cargo" id="cargo" class="dato_formulario" required">
         </div>
         <div class="enviar_formulario">
             <input type="submit" value="Crear">
@@ -156,7 +156,7 @@
             <input type="reset" value="Limpiar datos">
         </div>
         <div>
-            <input type="button" value="Volver" onclick="document.location.href='l_artista.php'">
+            <input type="button" value="Volver" onclick="document.location.href='l_empleado.php'">
         </div>
     </form>
         </div>

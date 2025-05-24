@@ -7,5 +7,4 @@ $artista->setNombre($_POST['nombre']);
 $artista->setNacionalidad($_POST['nacionalidad']);
 $artista->actualizar();
 header("Location: ../l_artista.php");
-exit;
 ?>
