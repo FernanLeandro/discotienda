@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DiscoTienda FDJM</title>
+  <title>Lista Proveedor</title>
   <link rel="stylesheet" href="css/master.css">
   <style>
     .main-content {
@@ -158,7 +158,7 @@
                 <th>Artista ID</th>
                 <th>Nombre</th>
                 <th>Nacionalidad</th>
-                <th colspan="2">Acciones</th>
+                <th colspan="2">Acciones <a href="cr_artista.php" title="Crear nuevo proveedor">➕</a></th>
             </tr>
         </thead>
       </table>
