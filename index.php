@@ -19,12 +19,12 @@
     <nav class="sidebar" id="sidebar">
       <ul>
         <li><a href="index.php">Inicio</a></li>
-        <li><a href="artista.php">Artista</a></li>
-        <li><a href="genero.php">Género</a></li>
-        <li><a href="empleado.php">Empleado</a></li>
-        <li><a href="m_inventario.php">Movimiento Inventario</a></li>
-        <li><a href="proveedor.php">Proveedor</a></li>
-        <li><a href="producto.php">Producto</a></li>
+        <li><a href="l_artista.php">Artista</a></li>
+        <li><a href="l_genero.php">Género</a></li>
+        <li><a href="l_empleado.php">Empleado</a></li>
+        <li><a href="l_movimiento_inventario.php">Movimiento Inventario</a></li>
+        <li><a href="l_proveedor.php">Proveedor</a></li>
+        <li><a href="l_producto.php">Producto</a></li>
       </ul>
     </nav>
 
