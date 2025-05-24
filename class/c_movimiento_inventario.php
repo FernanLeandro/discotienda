@@ -39,7 +39,7 @@ class movimiento_inventario extends basedatos
     {
         return $this->productoID;
     }
-    public function getempleadoID()
+    public function getEmpleadoID()
     {
         return $this->empleadoID;
     }
