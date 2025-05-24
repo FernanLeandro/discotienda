@@ -117,6 +117,7 @@
           <option>Categoría 1</option>
           <option>Categoría 2</option>
           <option>Categoría 3</option>
+
         </select>
       </div>
       <nav class="header-nav">
