@@ -4,13 +4,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lista Genero</title>
+  <title>DiscoTienda FDJM</title>
   <link rel="stylesheet" href="css/master.css">
 </head>
 
 <body>
   <header>
-    <img src="images/logo.png" alt="logo">
+    <a href="index.php">
+      <img src="images/logo.png" alt="logo">
+    </a>
     <h1>Lista Genero</h1>
     <div class="menu-icon" onclick="toggleSidebar()">☰</div>
   </header>

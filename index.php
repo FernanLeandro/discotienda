@@ -10,7 +10,9 @@
 
 <body>
   <header>
-    <img src="images/logo.png" alt="logo">
+    <a href="index.php">
+      <img src="images/logo.png" alt="logo">
+    </a>
     <h1>DiscoTienda FDJM</h1>
     <div class="menu-icon" onclick="toggleSidebar()">☰</div>
   </header>
