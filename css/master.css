@@ -12,9 +12,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  img {
+    height: 60px;
+    width: 60px;
+
+  }
 }
 
-.content{
+.content {
   color: rgb(118, 31, 75);
 }
 
@@ -80,19 +86,4 @@ footer {
   .sidebar.hidden {
     display: none;
   }
-}
-
-header {
-  background-color: rgb(118, 31, 75);
-  color: white;
-  padding: 1em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header img {
-  height: 60px;
-  width: 60px;
-
 }

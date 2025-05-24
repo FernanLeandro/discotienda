@@ -44,7 +44,7 @@ class artista extends basedatos
 
     public function insertar()
     {
-        $sql = sprintf("INSERT INTO discotienda (artistaID,nombre,cargo) VALUES ('%s', '%s', '%s')", $this->artistaID, $this->nombre, $this->nacionalidad);
+        $sql = sprintf("INSERT INTO artista (artistaID,nombre,cargo) VALUES ('%s', '%s', '%s')", $this->artistaID, $this->nombre, $this->nacionalidad);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $this->desconectar();
@@ -52,7 +52,7 @@ class artista extends basedatos
 
     public function listar()
     {
-        $sql = "SELECT * FROM discotienda ORDER BY nombre ASC";
+        $sql = "SELECT * FROM artista ORDER BY nombre ASC";
         $this->conectar();
         $this->ejecutarSQL($sql);
         $res = $this->cargarTodo();
@@ -62,7 +62,7 @@ class artista extends basedatos
 
     public function consultar()
     {
-        $sql = sprintf("SELECT * FROM discotienda WHERE artistaID = %s", $this->artistaID);
+        $sql = sprintf("SELECT * FROM artista WHERE artistaID = %s", $this->artistaID);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $res = $this->cargarRegistro();
@@ -73,7 +73,7 @@ class artista extends basedatos
 
     public function eliminar()
     {
-        $sql = sprintf("DELETE FROM discotienda WHERE artistaID = %s", $this->artistaID);
+        $sql = sprintf("DELETE FROM artista WHERE artistaID = %s", $this->artistaID);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $this->desconectar();
@@ -81,7 +81,7 @@ class artista extends basedatos
 
     public function actualizar()
     {
-        $sql = sprintf("UPDATE discotienda SET artistaID = '%s', nombre = '%s', codigo = '%s' WHERE artistaID = '%s'", $this->artistaID, $this->nombre, $this->nacionalidad, $this->artistaID);
+        $sql = sprintf("UPDATE artista SET artistaID = '%s', nombre = '%s', codigo = '%s' WHERE artistaID = '%s'", $this->artistaID, $this->nombre, $this->nacionalidad, $this->artistaID);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $this->desconectar();
