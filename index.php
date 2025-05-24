@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DiscoTienda FDJM</title>
   <link rel="stylesheet" href="css/master.css">
 </head>
-
 <body>
   <header>
-    <img src="images/logo.png" alt="logo">
-    <div >
-      <img class="logo" src="images/horizontal.png" alt="">
-   </div>
-    
+    <img src="images/logo.png" alt="logo"> 
+   <h1>Discotienda FDJM</h1>    
     <div class="menu-icon" onclick="toggleSidebar()">☰</div>
   </header>
-
   <div class="main-content">
     <nav class="sidebar" id="sidebar">
       <ul>
@@ -30,14 +24,12 @@
         <li><a href="l_producto.php">Producto</a></li>
       </ul>
     </nav>
-
     <div class="content">
       <h1>Bienvenido</h1>
       <p>¡Bienvenidos a la Discotienda <strong>FDJM</strong>!. Un software de sistematización</p>
       <p>🎵 ¡La música vive aquí!</p>
     </div>
   </div>
-
   <footer>
     © 2025 DiscoTienda, Todos los derechos reservados.
   </footer>
