@@ -163,7 +163,7 @@ $res = $proveedor->listar();
                 <th>Artista ID</th>
                 <th>Nombre</th>
                 <th>Nacionalidad</th>
-                <th colspan="2">Acciones <a href="cr_artista.php" title="Crear nuevo proveedor">➕</a></th>
+                <th colspan="2">Acciones</th>
             </tr>
         </thead>
       </table>

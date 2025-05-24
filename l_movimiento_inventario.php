@@ -9,7 +9,7 @@ $res = $movimiento->listar();
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lista Movimiento Inventario</title>
+  <title>DiscoTienda FDJM</title>
   <link rel="stylesheet" href="css/master.css">
   <style>
     .main-content {
@@ -167,14 +167,6 @@ $res = $movimiento->listar();
           <?php } ?>
         </tbody>
         <thead>
-<<<<<<< HEAD
-            <tr>
-                <th>Artista ID</th>
-                <th>Nombre</th>
-                <th>Nacionalidad</th>
-                <th colspan="2">Acciones <a href="cr_artista.php" title="Crear nuevo movimiento inventario">➕</a></th>
-            </tr>
-=======
           <tr>
             <th>Movimiento ID</th>
             <th>Fecha</th>
@@ -184,7 +176,6 @@ $res = $movimiento->listar();
             <th>Empleado ID</th>
             <th colspan="2">Acciones</th>
           </tr>
->>>>>>> d8cfb3be07391f2a824d3b07de2203c58fd281cc
         </thead>
       </table>
     </div>
