@@ -10,7 +10,6 @@ class artista extends basedatos
         $this->artistaID = $artistaID;
         $this->nombre = $nombre;
         $this->nacionalidad = $nacionalidad;
-        $this->cargo = $cargo;
     }
 
     public function getartistaID()
