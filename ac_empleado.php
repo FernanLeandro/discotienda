@@ -6,6 +6,9 @@ $empleado->consultar();
 ?>
 <!DOCTYPE html>
 <html lang="es">
+    <style>
+        
+    </style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,7 +32,7 @@ $empleado->consultar();
             <input type="reset" value="Limpiar datos">
         </div>
         <div>
-            <input type="button" value="Volver" onclick="document.location.href='l_artista.php'">
+            <input type="button" value="Volver" onclick="document.location.href='l_empleado.php'">
         </div>
     </form>
 </body>

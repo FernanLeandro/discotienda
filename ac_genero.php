@@ -13,14 +13,10 @@ $genero->consultar();
 </head>
 <body>
     <form action="genero/op_actualizar.php" method="POST">
-        <input type="hidden" name="artistaID" value="<?php echo $artista->getArtistaID(); ?>">
+        <input type="hidden" name="artistaID" value="<?php echo $genero->getGeneroID(); ?>">
         <div>
             <label for="nombre">Nombre </label>
-            <input type="text" name="nombre" id="getNombre" class="dato_formulario" required maxlength="200" value="<?php echo $artista->getNombre(); ?>">
-        </div>
-        <div>
-            <label for="nacionalidad">Nacionalidad</label>
-            <input type="text" name="nacionalidad" id="nacionalidad" class="dato_formulario" required value="<?php echo $artista->getNacionalidad(); ?>">
+            <input type="text" name="nombre" id="nombre" class="dato_formulario" required maxlength="200" value="<?php echo $genero->getNombre(); ?>">
         </div>
         <div class="enviar_formulario">
             <input type="submit" value="Actualizar">

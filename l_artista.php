@@ -1,3 +1,8 @@
+<?php
+require_once('class/c_artista.php');
+$artista = new artista();
+$res = $artista->listar();
+?>
 <!DOCTYPE html>
 <html lang="es">
 

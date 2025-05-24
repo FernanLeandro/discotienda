@@ -29,7 +29,7 @@ $producto->consultar();
             <input type="reset" value="Limpiar datos">
         </div>
         <div>
-            <input type="button" value="Volver" onclick="document.location.href='l_artista.php'">
+            <input type="button" value="Volver" onclick="document.location.href='l_producto.php'">
         </div>
     </form>
 </body>

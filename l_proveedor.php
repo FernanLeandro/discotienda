@@ -1,3 +1,8 @@
+<?php
+require_once('class/c_proveedor.php');
+$proveedor = new proveedor();
+$res = $proveedor->listar();
+?>
 <!DOCTYPE html>
 <html lang="es">
 

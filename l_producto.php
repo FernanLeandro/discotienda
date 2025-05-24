@@ -1,3 +1,8 @@
+<?php
+require_once('class/c_producto.php');
+$producto = new producto();
+$res = $producto->listar();
+?>
 <!DOCTYPE html>
 <html lang="es">
 

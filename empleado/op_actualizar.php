@@ -7,5 +7,4 @@ $empleado->setNombre($_POST['nombre']);
 $empleado->setCargo($_POST['cargo']);
 $empleado->actualizar();
 header("Location: ../l_genero.php");
-exit;
 ?>
