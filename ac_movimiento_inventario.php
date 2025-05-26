@@ -150,7 +150,7 @@ $movimiento_inventario->consultar();
         </div>
         <div>
             <label for="tipo">Tipo</label>
-            <select name="tipo" id="tipo" class="dato_formulario" required>
+            <select name="text" id="tipo" class="dato_formulario" required>
                 <option value="Entrada" <?php echo ($movimiento_inventario->getTipo() == 'Entrada') ? 'selected' : ''; ?>>
                     Entrada</option>
                 <option value="Salida" <?php echo ($movimiento_inventario->getTipo() == 'Salida') ? 'selected' : ''; ?>>
@@ -164,12 +164,12 @@ $movimiento_inventario->consultar();
         </div>
         <div>
             <label for="productoID">Producto ID</label>
-            <input type="text" name="productoID" id="productoID" class="dato_formulario" required
+            <input type="numer" name="productoID" id="productoID" class="dato_formulario" required
                 value="<?php echo $movimiento_inventario->getProductoID(); ?>">
         </div>
         <div>
             <label for="empleadoID">Empleado ID</label>
-            <input type="text" name="empleadoID" id="empleadoID" class="dato_formulario" required
+            <input type="numer" name="empleadoID" id="empleadoID" class="dato_formulario" required
                 value="<?php echo $movimiento_inventario->getEmpleadoID(); ?>">
         </div>
         <div class="enviar_formulario">

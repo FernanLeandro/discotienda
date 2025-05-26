@@ -135,7 +135,7 @@ $res = $producto->listar();
       <table>
         <thead>
           <tr>
-            <th></th>Producto ID</th>
+            <th>Producto ID</th>
             <th>Título</th>
             <th>Año de Lanzamiento</th>
             <th>Precio</th>
@@ -155,7 +155,7 @@ $res = $producto->listar();
                 </form>
               </td>
               <td>
-                <form action="artista/op_eliminar.php" method="POST">
+                <form action="producto/op_eliminar.php" method="POST">
                   <button name="cod_eliminar" value="<?php echo $registro['productoID']; ?>">Eliminar</button>
                 </form>
               </td>
@@ -164,11 +164,11 @@ $res = $producto->listar();
         </tbody>
         <thead>
           <tr>
-            <th></th>Producto ID</th>
+            <th>Producto ID</th>
             <th>Título</th>
             <th>Año de Lanzamiento</th>
             <th>Precio</th>
-            <th colspan="2">Acciones <a href="cr_producto.php" title="Crear nuevo producto">➕</a></th>
+            <th colspan="2">Acciones</a></th>
           </tr>
         </thead>
       </table>

@@ -149,7 +149,7 @@
                 </div>
                 <div>
                     <label for="tipo">Tipo</label>
-                    <select name="tipo" id="tipo" class="dato_formulario" required>
+                    <select name="text" id="tipo" class="dato_formulario" required>
                         <option value="Entrada">Entrada</option>
                         <option value="Salida">Salida</option>
                     </select>
