@@ -11,9 +11,6 @@ $producto->consultar();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actualizar Producto</title>
 </head>
-<<<<<<< HEAD
-
-=======
 <style>
         body {
             margin: 0;
@@ -142,7 +139,6 @@ $producto->consultar();
             }
         }
     </style>
->>>>>>> eb72569b0b08436c80676fab1dfc17556baedfd6
 <body>
             <form action="producto/op_crear.php" method="POST">
                 <div>
@@ -151,7 +147,7 @@ $producto->consultar();
                 </div>
                 <div>
                     <label for="año_lanzamiento">Año Lanzamiento</label>
-                    <input type="date" name="año_lanzamiento" id="año_lanzamiento" class="dato_formulario" value="<?php echo $producto->getTitulo(); ?>" required>
+                    <input type="date" name="año_lanzamiento" id="año_lanzamiento" class="dato_formulario" value="<?php echo $producto->getAñoLanzamiento(); ?>" required>
                 </div>
                 <div>
                     <label for="precio">Precio</label>

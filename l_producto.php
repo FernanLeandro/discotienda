@@ -139,7 +139,7 @@ $res = $producto->listar();
             <th>Título</th>
             <th>Año de Lanzamiento</th>
             <th>Precio</th>
-            <th colspan="2">Acciones <a href="cr_producto.php" title="Crear nuevo producto">➕</a></th>
+            <th colspan="2">Acciones <a href="ac_producto.php" title="Crear nuevo producto">➕</a></th>
           </tr>
         </thead>
         <tbody>
@@ -150,7 +150,7 @@ $res = $producto->listar();
               <td><?php echo $registro['año_lanzamiento']; ?></td>
               <td><?php echo $registro['precio']; ?></td>
               <td>
-                <form action="ac_artista.php" method="POST">
+                <form action="ac_producto.php" method="POST">
                   <button name="cod_actualizar" value="<?php echo $registro['productoID']; ?>">Actualizar</button>
                 </form>
               </td>
