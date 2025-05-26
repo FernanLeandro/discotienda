@@ -16,7 +16,7 @@ $res = $producto->listar();
       display: flex;
       min-height: calc(100vh - 160px);
     }
-    
+
     table {
       width: 95%;
       margin: 20px auto;
@@ -26,28 +26,29 @@ $res = $producto->listar();
       border-radius: 10px;
       overflow: hidden;
     }
-    
-    th, td {
+
+    th,
+    td {
       padding: 12px 15px;
       text-align: left;
       border-bottom: 1px solid #dddddd;
     }
-    
+
     th {
       background-color: #761f4b;
       color: white;
       position: sticky;
       top: 0;
     }
-    
+
     tr:nth-child(even) {
       background-color: #f3f3f3;
     }
-    
+
     tr:hover {
       background-color: #f1e0e6;
     }
-    
+
     button {
       padding: 8px 12px;
       border: none;
@@ -55,29 +56,29 @@ $res = $producto->listar();
       cursor: pointer;
       transition: all 0.3s;
     }
-    
+
     button[name="cod_actualizar"] {
       background-color: #761f4b;
       color: white;
     }
-    
+
     button[name="cod_eliminar"] {
       background-color: #d32f2f;
       color: white;
     }
-    
+
     button:hover {
       opacity: 0.9;
       transform: translateY(-1px);
     }
-    
+
     a[title="Crear nuevo artista"] {
       color: white;
       text-decoration: none;
       font-weight: bold;
       margin-left: 5px;
     }
-    
+
     footer {
       position: relative;
       bottom: 0;
@@ -88,18 +89,19 @@ $res = $producto->listar();
       padding: 1em 0;
       margin-top: auto;
     }
-    
+
     @media (max-width: 768px) {
       table {
         width: 100%;
         font-size: 14px;
         border-radius: 8px;
       }
-      
-      th, td {
+
+      th,
+      td {
         padding: 8px 10px;
       }
-      
+
       button {
         padding: 6px 10px;
         font-size: 14px;
@@ -132,39 +134,42 @@ $res = $producto->listar();
     <div style="flex: 1; padding: 20px;">
       <table>
         <thead>
-            <tr>
-                <th>Artista ID</th>
-                <th>Nombre</th>
-                <th>Nacionalidad</th>
-                <th colspan="2">Acciones <a href="cr_producto.php" title="Crear nuevo producto">➕</a></th>
-            </tr>
+          <tr>
+            <th></th>Producto ID</th>
+            <th>Título</th>
+            <th>Año de Lanzamiento</th>
+            <th>Precio</th>
+            <th colspan="2">Acciones</th>
+          </tr>
         </thead>
         <tbody>
-            <?php foreach ($res as $registro) { ?>
-                <tr>
-                    <td><?php echo $registro['artistaID']; ?></td>
-                    <td><?php echo $registro['nombre']; ?></td>
-                    <td><?php echo $registro['nacionalidad']; ?></td>
-                    <td>
-                        <form action="ac_artista.php" method="POST">
-                            <button name="cod_actualizar" value="<?php echo $registro['artistaID']; ?>">Actualizar</button>
-                        </form>
-                    </td>
-                    <td>
-                        <form action="artista/op_eliminar.php" method="POST">
-                            <button name="cod_eliminar" value="<?php echo $registro['artistaID']; ?>">Eliminar</button>
-                        </form>
-                    </td>
-                </tr>
-            <?php } ?>
+          <?php foreach ($res as $registro) { ?>
+            <tr>
+              <td><?php echo $registro['productoID']; ?></td>
+              <td><?php echo $registro['titulo']; ?></td>
+              <td><?php echo $registro['año_lanzamiento']; ?></td>
+              <td><?php echo $registro['precio']; ?></td>
+              <td>
+                <form action="ac_artista.php" method="POST">
+                  <button name="cod_actualizar" value="<?php echo $registro['productoID']; ?>">Actualizar</button>
+                </form>
+              </td>
+              <td>
+                <form action="artista/op_eliminar.php" method="POST">
+                  <button name="cod_eliminar" value="<?php echo $registro['productoID']; ?>">Eliminar</button>
+                </form>
+              </td>
+            </tr>
+          <?php } ?>
         </tbody>
         <thead>
-            <tr>
-                <th>Artista ID</th>
-                <th>Nombre</th>
-                <th>Nacionalidad</th>
-                <th colspan="2">Acciones</th>
-            </tr>
+          <tr>
+            <th></th>Producto ID</th>
+            <th>Título</th>
+            <th>Año de Lanzamiento</th>
+            <th>Precio</th>
+            <th colspan="2">Acciones</th>
+          </tr>
         </thead>
       </table>
     </div>
@@ -180,4 +185,5 @@ $res = $producto->listar();
     }
   </script>
 </body>
+
 </html>
