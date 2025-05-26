@@ -81,7 +81,7 @@ class artista extends basedatos
 
     public function actualizar()
     {
-        $sql = sprintf("UPDATE artista SET artistaID = '%s', nombre = '%s', codigo = '%s' WHERE artistaID = '%s'", $this->artistaID, $this->nombre, $this->nacionalidad, $this->artistaID);
+        $sql = sprintf("UPDATE artista SET artistaID = '%s', nombre = '%s', nacionalidad = '%s' WHERE artistaID = '%s'", $this->artistaID, $this->nombre, $this->nacionalidad, $this->artistaID);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $this->desconectar();

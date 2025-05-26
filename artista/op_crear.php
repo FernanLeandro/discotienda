@@ -12,6 +12,6 @@ include('../class/c_artista.php');
     echo"Variables tipo GET <br> 
         Nombre: ".$_GET['nombre']." Nacionalidad: ".$_GET['nacionalidad'];
 } else {
-    header("Location: ../index.php");
+    header("Location: ../l_artista.php");
 }
 ?>
