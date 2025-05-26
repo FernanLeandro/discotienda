@@ -81,8 +81,9 @@ class empleado extends basedatos
 
     public function actualizar()
     {
-        $sql = sprintf("UPDATE empleado SET empleadoID = '%s', nombre = '%s', codigo = '%s' WHERE empleadoID = '%s'", $this->empleadoID, $this->nombre, $this->cargo, $this->empleadoID);
+        $sql = sprintf("UPDATE empleado SET empleadoID = '%s', nombre = '%s', cargo = '%s' WHERE empleadoID = %s", $this->empleadoID, $this->nombre, $this->cargo, $this->empleadoID);
         $this->conectar();
+    //    echo $sql;
         $this->ejecutarSQL($sql);
         $this->desconectar();
     }

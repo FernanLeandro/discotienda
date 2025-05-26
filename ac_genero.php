@@ -142,7 +142,7 @@ $genero->consultar();
 
 <body>
     <form action="genero/op_actualizar.php" method="POST">
-        <input type="hidden" name="artistaID" value="<?php echo $genero->getGeneroID(); ?>">
+        <input type="hidden" name="generoID" value="<?php echo $genero->getGeneroID(); ?>">
         <div>
             <label for="nombre">Nombre </label>
             <input type="text" name="nombre" id="nombre" class="dato_formulario" required maxlength="200" value="<?php echo $genero->getNombre(); ?>">

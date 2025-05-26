@@ -11,7 +11,6 @@ $empleado->consultar();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actualizar empleado</title>
 </head>
-<<<<<<< HEAD
 <style>
         body {
             margin: 0;
@@ -140,19 +139,16 @@ $empleado->consultar();
             }
         }
     </style>
-=======
-
->>>>>>> 2aaa78a6183aa45887e38004c357ab06af5ece03
 <body>
     <form action="empleado/op_actualizar.php" method="POST">
         <input type="hidden" name="empleadoID" value="<?php echo $empleado->getEmpleadoID(); ?>">
         <div>
             <label for="nombre">Nombre </label>
-            <input type="text" name="nombre" id="getNombre" class="dato_formulario" required maxlength="200" value="<?php echo $empleado->getNombre(); ?>">
+            <input type="text" name="nombre" id="nombre" class="dato_formulario" required maxlength="200" value="<?php echo $empleado->getNombre(); ?>">
         </div>
         <div>
             <label for="cargo">Cargo</label>
-            <input type="text" name="nacionalidad" id="nacionalidad" class="dato_formulario" required value="<?php echo $empleado->getCargo(); ?>">
+            <input type="text" name="cargo" id="cargo" class="dato_formulario" required value="<?php echo $empleado->getCargo(); ?>">
         </div>
         <div class="enviar_formulario">
             <input type="submit" value="Actualizar">

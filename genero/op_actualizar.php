@@ -7,3 +7,5 @@ $genero->setNombre($_POST['nombre']);
 $genero->actualizar();
 header("Location: ../l_genero.php");
 ?>
+
+
