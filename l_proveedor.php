@@ -140,7 +140,7 @@ $res = $proveedor->listar();
             <th>Contacto</th>
             <th>Teléfono</th>
             <th>Email</th>
-            <th colspan="2">Acciones <a href="cr_artista.php" title="Crear nuevo proveedor">➕</a></th>
+            <th colspan="2">Acciones <a href="cr_proveedor.php" title="Crear nuevo proveedor">➕</a></th>
           </tr>
         </thead>
         <tbody>
