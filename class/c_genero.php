@@ -7,11 +7,7 @@ class genero extends basedatos
     public $generoID;
     public $nombre;
     //public $nacionalidad;
-    function __construct(
-        $generoID
-        = 'NULL',
-        $nombre = 'NULL'
-    ) {
+    function __construct($generoID = NULL, $nombre = NULL) {
         $this->generoID = $generoID;
         $this->nombre = $nombre;
         // $this->nacionalidad = $nacionalidad;
@@ -77,16 +73,14 @@ class genero extends basedatos
     public function eliminar()
     {
         $sql = sprintf(
-            "DELETE FROM genero WHERE generoID = %s",
-            $this->generoID
-        );
+            "DELETE FROM genero WHERE generoID = %s", $this->generoID);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $this->desconectar();
     }
     public function actualizar()
     {
-        $sql = sprintf("UPDATE genero SET generoID = '%s', nombre = '%s' WHERE generoID = '%s'", $this->generoID, $this->nombre, $this->generoID);
+        $sql = sprintf("UPDATE genero SET generoID = '%s', nombre = '%s' WHERE generoID = %s", $this->generoID, $this->nombre, $this->generoID);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $this->desconectar();
