@@ -2,18 +2,16 @@
 include('class/c_empleado.php');
 $empleado = new empleado();
 $empleado->setEmpleadoID($_POST['cod_actualizar']);
-$empleado->consultar();    
+$empleado->consultar();
 ?>
 <!DOCTYPE html>
 <html lang="es">
-    <style>
-        
-    </style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actualizar Empleado</title>
+    <title>Actualizar empleado</title>
 </head>
+<<<<<<< HEAD
 <style>
         body {
             margin: 0;
@@ -142,6 +140,9 @@ $empleado->consultar();
             }
         }
     </style>
+=======
+
+>>>>>>> 2aaa78a6183aa45887e38004c357ab06af5ece03
 <body>
     <form action="empleado/op_actualizar.php" method="POST">
         <input type="hidden" name="empleadoID" value="<?php echo $empleado->getEmpleadoID(); ?>">
@@ -164,4 +165,5 @@ $empleado->consultar();
         </div>
     </form>
 </body>
+
 </html>

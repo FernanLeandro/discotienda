@@ -44,7 +44,7 @@ class artista extends basedatos
 
     public function insertar()
     {
-        $sql = sprintf("INSERT INTO artista (artistaID,nombre,cargo) VALUES ('%s', '%s', '%s')", $this->artistaID, $this->nombre, $this->nacionalidad);
+        $sql = sprintf("INSERT INTO artista (artistaID,nombre,nacionalidad) VALUES ('%s', '%s', '%s')", $this->artistaID, $this->nombre, $this->nacionalidad);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $this->desconectar();
