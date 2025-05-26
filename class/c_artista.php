@@ -44,7 +44,7 @@ class artista extends basedatos
 
     public function insertar()
     {
-        $sql = sprintf("INSERT INTO artista (artistaID,nombre,cargo) VALUES ('%s', '%s', '%s')", $this->artistaID, $this->nombre, $this->nacionalidad);
+        $sql = sprintf("INSERT INTO artista (artistaID,nombre,nacionalidad) VALUES ('%s', '%s', '%s')", $this->artistaID, $this->nombre, $this->nacionalidad);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $this->desconectar();
@@ -81,7 +81,7 @@ class artista extends basedatos
 
     public function actualizar()
     {
-        $sql = sprintf("UPDATE artista SET artistaID = '%s', nombre = '%s', codigo = '%s' WHERE artistaID = '%s'", $this->artistaID, $this->nombre, $this->nacionalidad, $this->artistaID);
+        $sql = sprintf("UPDATE artista SET artistaID = '%s', nombre = '%s', nacionalidad = '%s' WHERE artistaID = '%s'", $this->artistaID, $this->nombre, $this->nacionalidad, $this->artistaID);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $this->desconectar();
