@@ -19,6 +19,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 } else {
-    header("Location: ../index.php");
+    header("Location: ../l_proveedor.php");
 }
 ?>
