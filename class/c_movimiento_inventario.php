@@ -74,7 +74,7 @@ class movimiento_inventario extends basedatos
 
     public function insertar()
     {
-        $sql = sprintf("INSERT INTO movimiento_inventario (fecha,tipo,cantidad,productoID,empleadoID) VALUES ('%s', '%s', '%s', '%s', '%s', '%s')", $this->fecha, $this->tipo, $this->cantidad, $this->productoID, $this->empleadoID);
+        $sql = sprintf("INSERT INTO movimiento_inventario (movimientoID,fecha,tipo,cantidad,productoID,empleadoID) VALUES ('%s', '%s', '%s', '%s', '%s', '%s')", $this->movimientoID, $this->fecha, $this->tipo, $this->cantidad, $this->productoID, $this->empleadoID);
         $this->conectar();
         $this->ejecutarSQL($sql);
         $this->desconectar();
@@ -82,7 +82,7 @@ class movimiento_inventario extends basedatos
 
     public function listar()
     {
-        $sql = "SELECT * FROM movimiento_inventario ORDER BY fecha ASC";
+        $sql = "SELECT * FROM movimiento_inventario ORDER BY movimientoID ASC";
         $this->conectar();
         $this->ejecutarSQL($sql);
         $res = $this->cargarTodo();
