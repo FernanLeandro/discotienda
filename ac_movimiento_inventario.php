@@ -1,5 +1,8 @@
 <?php
 include('class/c_movimiento_inventario.php');
+include('class/c_producto.php');
+include('class/c_empleado.php');
+
 $movimiento_inventario = new movimiento_inventario();
 $movimiento_inventario->setMovimientoID($_POST['cod_actualizar']);
 $movimiento_inventario->consultar();
@@ -164,12 +167,12 @@ $movimiento_inventario->consultar();
         </div>
         <div>
             <label for="productoID">Producto ID</label>
-            <input type="text" name="productoID" id="productoID" class="dato_formulario" required
+            <input type="text" name="productoID" id="productoID" class="dato_formulario" 
                 value="<?php echo $movimiento_inventario->getProductoID(); ?>">
         </div>
         <div>
             <label for="empleadoID">Empleado ID</label>
-            <input type="text" name="empleadoID" id="empleadoID" class="dato_formulario" required
+            <input type="text" name="empleadoID" id="empleadoID" class="dato_formulario"
                 value="<?php echo $movimiento_inventario->getEmpleadoID(); ?>">
         </div>
         <div class="enviar_formulario">
