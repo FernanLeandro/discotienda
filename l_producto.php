@@ -139,7 +139,7 @@ $res = $producto->listar();
             <th>Título</th>
             <th>Año de Lanzamiento</th>
             <th>Precio</th>
-            <th colspan="2">Acciones</th>
+            <th colspan="2">Acciones <a href="cr_producto.php" title="Crear nuevo producto">➕</a></th>
           </tr>
         </thead>
         <tbody>
@@ -168,7 +168,7 @@ $res = $producto->listar();
             <th>Título</th>
             <th>Año de Lanzamiento</th>
             <th>Precio</th>
-            <th colspan="2">Acciones</th>
+            <th colspan="2">Acciones <a href="cr_producto.php" title="Crear nuevo producto">➕</a></th>
           </tr>
         </thead>
       </table>
